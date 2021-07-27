@@ -1,4 +1,4 @@
-# Fixed wing aircraft stall detection using ML
+# Fixed wing aircraft stall detection using AI/ML
 
 ## Proble Statement and Objectives
 Aerodynamic stall is a hazardous condition for fixed-wing aircraft during which the airflow over the wings necessary to generate sufficient lift for flight becomes turbulent.  The turbulence reduces and abruptly ends the lift necessary to maintain flight, and the aircraft subsequently plummets from the sky.  The time between the initial onset and realization of stall ranges from fifteen to twenty seconds, leaving minimal time for pilots to implement necessary life-saving aircraft maneuvers.  Fixed-wing aircraft are often equipped with several preventative or detective controls, including a minimum recommend operating speed above potential stall speed, as well as a haptic alert issued through the physical pilot controls called a stick shaker.  Despite these preventative and detective controls, there is a history of catastrophic flight accidents attributed to stall due to controls failure.
@@ -26,7 +26,7 @@ Given the set of initial conditions generated randonly for each simulation, the 
 3.	Uncommanded descent high, uncommanded roll: all the above and decreasing vertical speed and Std. of altitude > 7
 
 ![image](https://user-images.githubusercontent.com/10969756/127081580-a64a2e1d-8cef-4384-9643-8f41e211c278.png?style=centerme)
-*Fig[2]. Single simualtion strichart with classes marke in red*
+*Fig[2]. Single simualation stripchart with classes marked in red*
 
 ## Feature engineering and feature selection
 Rolling mean, rolling variance, exponential rolling mean and exponential rolling variance of the below flight attributes were generated.
@@ -106,7 +106,7 @@ Explainability is essential with any AI/ML model which includes Simulatability, 
 
 
 ## Summary
-30 seconds into the flight, LSTM predicted onset of stall would happen at 52nd sec and 40 sec into the flight, it predicted uncommanded descent high and roll would happen at 65th sec. XGBoost and Logistic Regression predictions are shown in the graph below for the three classes.
+52.4 sec  in the flight journey, the model(back window =1 sec and forward window = 0.1) is able to predict onset of stall at 52.4 sec . And at 51.3 sec of the flight journey , trained model (back window = 1 sec and forward window = 20 sec ) is able to predict uncommanded descent high( class 3) at 71.3. XGBoost and Logistic Regression predictions are shown in the graph below for the three classes.
 
 ![image](https://user-images.githubusercontent.com/10969756/127148843-de710210-639e-422f-a666-27ece6ddeab7.png)
 
