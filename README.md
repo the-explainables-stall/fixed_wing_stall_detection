@@ -38,7 +38,10 @@ Rolling mean, rolling variance, exponential rolling mean and exponential rolling
 * Altitude
 
 A simple Random Forest classification model with parameters of n_estimators=100, and random_state=1 was developed for this purpose. The model took a few hours to run and an accuracy of 87% was obtained. The following is the resulting score of each dependent variables in the data in predicting stall. Angel of attach, pitch roll, vertical speed, air speed and altitude are the imporatant features in that order. 
-*INCLUDE UPDATED SCORE HERE*
+
+![image](https://user-images.githubusercontent.com/10969756/127134975-8acbc17d-16dd-42e9-98fb-bb208109839d.png)
+
+*feature importance with random forest*
 
 ## Modeling
 
@@ -75,8 +78,15 @@ Using random search to obtain hyper-parameters and 10 fold cross validation alon
 For LSTM feature engineering, the sliding window technique is used. A prediction model with more than one-time variable to predict the next step is the sliding window model. For example, the value at t and value at t+1 is used to predict the value at time t+2. The models can be developed using the current time t and previous times t-1 as input variables to predict t+1. In this technique a look back window of certain time is chosen, and the class is predicted looking forward to a certain data point. Shift of certain data point is also chosen in this technique.
 
 ## Explainability
-![image](https://user-images.githubusercontent.com/10969756/127084020-8e815626-ddaa-42ef-8bcf-e7c387c482e5.png?style=centerme)
+Explainability is essential with any AI/ML model which includes Simulatability, Decomposability, and Transparency. Blackbox tools like LIME help understand contributing features.
 
-*Decision explained by the features using LIME*
+![image](https://user-images.githubusercontent.com/10969756/127139975-678b7933-4852-4205-b7b9-f464ee99d5c0.png?style=centerme)
+
+*XGBoost predictions explained with LIME*
+
+![image](https://user-images.githubusercontent.com/10969756/127139992-660be37d-49e9-486e-b6c1-2015c926beea.png?style=centerme)
+
+
+*Logistic Regression predictions explained by the features using LIME*
 
 
