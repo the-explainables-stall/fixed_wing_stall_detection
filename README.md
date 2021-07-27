@@ -90,3 +90,17 @@ Explainability is essential with any AI/ML model which includes Simulatability, 
 *Logistic Regression predictions explained by the features using LIME*
 
 
+## Summary
+![image](https://user-images.githubusercontent.com/10969756/127140546-c803ec14-d84b-4789-9325-f3e8bd839773.png)
+
+*Models predcition vs observed stripchart*
+
+* XGBoost and Logistic Regression could achieve high accuracy, recall rate, and efficient latency with effective feature engineering and selection techniques.
+* LSTM could predict all the three conditions ahead of time but with latency.
+* Explainability is essential with any AI/ML model which includes Simulatability, Decomposability, and Transparency. Blackbox tools like LIME help understand contributing features.
+* Better hyper-parameter tuning, adding more layers and dropout layer will boost LSTM performance significantly.
+* Simulation can be improved by unsupervised models and/or anomaly detection algorithms
+* Interface / dashboard to predict and show explainable features.
+* Two sets of simulations / algorithms running for each side of the aircraft and a summarizing model.
+
+
