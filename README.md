@@ -62,19 +62,20 @@ Dataset was split into training and test datasets.  Lag features were generated 
 * Time Window Segmentation: The time series data was segmented into various window spans.  
 * Summary statistics such mean, variance etc., were calculated for each window.  
 
-![image](https://user-images.githubusercontent.com/10969756/127083567-929e69b5-087a-4b5f-8f4b-6aeaac7d65aa.png)
+![image](https://user-images.githubusercontent.com/10969756/127083567-929e69b5-087a-4b5f-8f4b-6aeaac7d65aa.png?style=centerme)
 
 *Confusion matrix with the different set of features*
 
 Using random search to obtain hyper-parameters and 10 fold cross validation along with feature engieering and selection algorithms, XGBoost was able to attain good recall score overall.
-![image](https://user-images.githubusercontent.com/10969756/127083729-b3d4091e-f9fd-477e-815c-b23a69d948bf.png)
+![image](https://user-images.githubusercontent.com/10969756/127083729-b3d4091e-f9fd-477e-815c-b23a69d948bf.png?style=centerme)
+
 *Observed vs Predcicted/Classified*
 
 ### LSTM
 For LSTM feature engineering, the sliding window technique is used. A prediction model with more than one-time variable to predict the next step is the sliding window model. For example, the value at t and value at t+1 is used to predict the value at time t+2. The models can be developed using the current time t and previous times t-1 as input variables to predict t+1. In this technique a look back window of certain time is chosen, and the class is predicted looking forward to a certain data point. Shift of certain data point is also chosen in this technique.
 
 ## Explainability
-![image](https://user-images.githubusercontent.com/10969756/127084020-8e815626-ddaa-42ef-8bcf-e7c387c482e5.png)
+![image](https://user-images.githubusercontent.com/10969756/127084020-8e815626-ddaa-42ef-8bcf-e7c387c482e5.png?style=centerme)
 
 *Decision explained by the features using LIME*
 
