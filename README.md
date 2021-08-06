@@ -47,11 +47,11 @@ A simple Random Forest classification model with parameters of n_estimators=100,
 ## Modeling
 
 ### Logistic Regression
-A set of logistic regression models is developed to predict the varying stages of stall—onset, uncommanded descent, etc.  These models leverage three different sets of input variables: 1) raw input variables without feature engineering; 2) rolling window statistics; 3) a combination of raw input and rolling window statistics.  Note that the predictions for the earlier stages of stall will feed into models predicting the subsequent stages of stall. 
+A set of logistic regression models is developed to predict the varying stages of stall—onset, uncommanded descent, etc.  These models leverage three different sets of input variables: 1) raw input variables without feature engineering; 2) rolling window statistics; 3) a combination of raw input and rolling window statistics.  Note a separate binary logistic regression model was created for each classifier.
 
-![image](https://user-images.githubusercontent.com/10969756/127083172-041d1a85-61d6-4771-98bf-4e99feda3d08.png?style=centerme)
+![image](https://user-images.githubusercontent.com/68762834/128450542-11158f3b-125b-4a43-bf21-1f0095b42415.png)
 
-*Fig[4]. Feed forward logistic regression architecture*
+*Fig[4]. Multiple binary logistic regression models architecture*
 
 Incorporated time element using rolling means and variances calculated with varying time windows for each target variable (e.g., the rolling variance of Angle-of-Attack).Features used were "Raw" input variables (without transformation): pitch; flight path angle; airspeed; etc., Individually tuned "Rolling Window" input variables and 10 fold cross validation was used. Three binary classification models were developed to allow for individual tuning.
 
